@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Load the trained Decision Tree model
-model_path = './models/decision_tree_model.pkl' # Adjust path if necessary
+model_path = 'decision_tree_model.pkl' # Adjust path if necessary
 loaded_model = joblib.load(model_path)
 
 @app.route('/predict', methods=['POST'])
